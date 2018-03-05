@@ -97,6 +97,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			
+			
 		</plugins>
 	</build>
 
@@ -156,7 +157,7 @@
 		<version>2.6</version>
 		<configuration>
 			<formats>
-				<format>html</format>
+                <format>html</format>			     
 				<format>xml</format>
 			</formats>
 		</configuration>

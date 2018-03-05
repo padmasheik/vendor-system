@@ -20,8 +20,8 @@ public class ConsumerListener implements MessageListener {
 	private static Logger logger = LogManager.getLogger(ConsumerListener.class);
 	@Autowired
 	JmsTemplate jmsTemplate;
-	@Autowired
-	ConsumerAdapter consumerAdapter;
+	// @Autowired
+	ConsumerAdapter consumerAdapter = new ConsumerAdapter();
 
 	@Override
 	@JmsListener(destination = "CONSUMER.QUEUE")
