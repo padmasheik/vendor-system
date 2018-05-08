@@ -1,4 +1,4 @@
-package com.career.soa.activemq.vendorsystem;
+package com.soa.vendorsystem.VendorProducer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,16 +8,15 @@ import org.springframework.jms.annotation.EnableJms;
 
 @SpringBootApplication
 @EnableJms
-public class VendorSystemApplication extends SpringBootServletInitializer {
-
+public class VendorProducerApplication extends SpringBootServletInitializer {
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
 
-		return builder.sources(VendorSystemApplication.class);
+		return builder.sources(VendorProducerApplication.class);
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(VendorSystemApplication.class, args);
-
+		SpringApplication.run(VendorProducerApplication.class, args);
+		System.out.println("run success!!!!");
 	}
 }
