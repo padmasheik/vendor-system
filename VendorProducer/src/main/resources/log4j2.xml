@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 	<properties>
-		<property name="name">vendor-system</property>
+		<property name="name">vendorproducer</property>
 		<property name="pattern">%d{yyyy-MM-dd HH:mm:ss} | %-5.5p |	%-5.5t | %-80.80C:%-5.5L | %msg%n</property>
 		<!-- It will look like that: 2013-04-03 07:37:51.993 | WARN | main | lnetgateway.Server:56 
 			| My app is logging stuff -->
@@ -10,8 +10,8 @@
 		<Console name="Console" target="SYSTEM_OUT">
 			<PatternLayout pattern="${pattern}" />
 		</Console>
-		<RollingFile name="RollingFile" fileName="C:/Users/nasre/Downloads/apache-tomcat-8.0.48-windows-x64/apache-tomcat-8.0.48/logs/${name}.log"
-			filePattern="C:/Users/nasre/Downloads/apache-tomcat-8.0.48-windows-x64/apache-tomcat-8.0.48/logs/$${date:yyyy-MM}/${name}-%d{yyyy-MM-dd}-%i.log.gz">
+		<RollingFile name="RollingFile" fileName="C:/Users/nasre/Downloads/apache-tomcat-8.0.51-windows-x64/apache-tomcat-8.0.51/logs/${name}.log"
+			filePattern="C:/Users/nasre/Downloads/apache-tomcat-8.0.51-windows-x64/apache-tomcat-8.0.51/logs/$${date:yyyy-MM}/${name}-%d{yyyy-MM-dd}-%i.log.gz">
 			<PatternLayout>
 				<pattern>${pattern}</pattern>
 			</PatternLayout>
