@@ -7,7 +7,7 @@ public class Vendor {
 	private String streetAddress;
 	private String city;
 	private String state;
-	private String zipcode;
+	private String zipCode;
 	private String phoneNumber;
 	private String email;
 
@@ -59,12 +59,12 @@ public class Vendor {
 		this.state = state;
 	}
 
-	public String getZipcode() {
-		return zipcode;
+	public String getZipCode() {
+		return zipCode;
 	}
 
-	public void setZipcode(String zipcode) {
-		this.zipcode = zipcode;
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
 	}
 
 	public String getPhoneNumber() {
@@ -87,7 +87,7 @@ public class Vendor {
 	public String toString() {
 		return String.format(
 				"Vendor [vendorName=%s, firstName=%s, lastName=%s, streetAddress=%s, city=%s, state=%s, zipcode=%s, phoneNumber=%s, email=%s]",
-				getVendorName(), getFirstName(), getLastName(), getStreetAddress(), getCity(), getState(), getZipcode(),
+				getVendorName(), getFirstName(), getLastName(), getStreetAddress(), getCity(), getState(), getZipCode(),
 				getPhoneNumber(), getEmail());
 	}
 }
