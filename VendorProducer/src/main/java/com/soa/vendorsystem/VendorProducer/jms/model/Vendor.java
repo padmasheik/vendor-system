@@ -1,5 +1,8 @@
 package com.soa.vendorsystem.VendorProducer.jms.model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Vendor {
 	private String vendorName;
 	private String firstName;
