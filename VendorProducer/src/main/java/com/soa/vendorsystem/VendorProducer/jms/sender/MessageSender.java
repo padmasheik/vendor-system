@@ -4,19 +4,19 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
-import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.stereotype.Component;
 
-import com.soa.vendorsystem.VendorProducer.jms.controller.ProducerController;
-
+@Component
 public class MessageSender {
-	private static Logger logger = LogManager.getLogger(ProducerController.class);
+	private static Logger logger = LogManager.getLogger(MessageSender.class);
 	@Autowired
 	JmsTemplate jmsTemplate;
 
-	@SendTo("CONSUMER.QUEUE")
-	public void send(String json) {
-		jmsTemplate.convertAndSend(json);
+	// @SendTo("CONSUMER.QUEUE")
+	public String send(String json) {
+		jmsTemplate.convertAndSend("CONSUMER.QUEUE", json);
 		logger.info("Message sent");
+		return json;
 
 	}
 
